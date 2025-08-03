@@ -78,7 +78,7 @@ body {
     height: 5px;
     border-radius: 5px;
     background: #333;
-    margin: 0px;
+    margin: 3px 0;
     transition: 0.3s;
 }
 
@@ -788,4 +788,5 @@ body {
     }
 
 }
+
 
