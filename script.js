@@ -38,17 +38,7 @@ function scrollToSection(sectionId) {
     }
 }
 
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
+
 
 // Intersection Observer for animations
 const observerOptions = {
@@ -118,19 +108,6 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Enhanced scroll indicator
-const scrollIndicator = document.querySelector('.scroll-indicator');
-if (scrollIndicator) {
-    window.addEventListener('scroll', () => {
-        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        
-        if (scrollPercent > 10) {
-            scrollIndicator.style.opacity = '0';
-        } else {
-            scrollIndicator.style.opacity = '1';
-        }
-    });
-}
 
 // Add hover effects for interactive elements
 document.querySelectorAll('.content-card, .benefit-item, .application-card, .challenge-item, .timeline-item').forEach(card => {
@@ -205,5 +182,6 @@ function throttle(func, wait) {
 const throttledScrollHandler = throttle(() => {
     // Scroll-based animations and effects
 }, 16);
+
 
 window.addEventListener('scroll', throttledScrollHandler);
